@@ -1,0 +1,3 @@
+Atempt to design jigsaw with 2 unique combinations as per Matt Parker's latest video '[How can a jigsaw have two distinct solutions?](https://www.youtube.com/watch?v=b5nElEbbnfU&lc=UgwKtcYVK31H7LHjHW54AaABAg.A8P0XPpMqCZA8PBxmHXgMq)'
+Code generates a grid, shuffles position/orientation of pieces (maintaining proper edge/corner orientation), then identifies piece edges that must match. 
+Code doesn't achieve the desired goal of having only two unique combinations (doesn't even check for alternate combination) becaues a unique edge shape can propegate across many edges. For example, if one edge is shared 1:2 in one arrangement and 1:9 in the second arrangement, that edge must also be the same between 2:x, and y:9, which must also be shared between x:A, and B:y).
